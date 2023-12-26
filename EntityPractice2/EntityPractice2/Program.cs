@@ -1,13 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using EntityPractice2;
 
+
+
 repeat:   // -----------------------------------
 //Console.Clear();
 
 Console.WriteLine("What Do You Want to do?");
 Console.WriteLine("1. Add Student Data");
-Console.WriteLine("2. Logout");
-Console.WriteLine("3. Exit");
+Console.WriteLine("2. View All Student List");
+Console.WriteLine("3. Update a Stdent");
+Console.WriteLine("4. Exit");
 
 int choice;
 if (int.TryParse(Console.ReadLine(), out choice))
@@ -17,7 +20,7 @@ if (int.TryParse(Console.ReadLine(), out choice))
         case 1:
             AddStudent();
 
-            Console.WriteLine("What Do You Want to do?");
+            Console.WriteLine("What Do You Want to do?");   //>>>
             Console.WriteLine("1. Go To main Option");
             Console.WriteLine("2. Exit");
             int choice2 = int.Parse(Console.ReadLine());
@@ -29,14 +32,32 @@ if (int.TryParse(Console.ReadLine(), out choice))
             else
             {
                 Console.WriteLine("Exiting");
-            }
+            }                                               //>>
 
             break;
         case 2:
-            Console.WriteLine("Lorem ipsum");
-            
+            ViewAllStudent();
+
+            Console.WriteLine("What Do You Want to do?");   //>>>
+            Console.WriteLine("1. Go To main Option");
+            Console.WriteLine("2. Exit");
+            int choice3 = int.Parse(Console.ReadLine());
+            if (choice3 == 1)
+            {
+                Console.Clear();
+                goto repeat;  //---------------------------------
+            }
+            else
+            {
+                Console.WriteLine("Exiting");
+            }                                               //>>
+
             break;
         case 3:
+            Console.WriteLine("Lorem ipsum");
+            break;
+
+        case 4:
             Console.WriteLine("Lorem ipsum");
 
             break;
@@ -91,6 +112,22 @@ static void AddStudent()
 
     Console.WriteLine("Student Added To dataBase Successfully.");
 }
+
+
+static void ViewAllStudent()
+{
+    AppDbContext appDbContext = new AppDbContext();
+    List<Student> students = appDbContext.Students.ToList();
+
+    foreach (Student student in students)
+    {
+        Console.WriteLine($"Id: {student.Id} Name: {student.Name} Cgpa: {student.Cgpa} DateOfBirth: {student.DateOfBirth}");
+    }
+}
+
+
+
+
 
 
 
