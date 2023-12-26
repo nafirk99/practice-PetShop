@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using EntityPractice2;
+using System.Runtime.InteropServices;
 
 
 
@@ -9,7 +10,7 @@ repeat:   // -----------------------------------
 Console.WriteLine("What Do You Want to do?");
 Console.WriteLine("1. Add Student Data");
 Console.WriteLine("2. View All Student List");
-Console.WriteLine("3. Update a Stdent");
+Console.WriteLine("3. Delete a Stdent");
 Console.WriteLine("4. Exit");
 
 int choice;
@@ -54,12 +55,26 @@ if (int.TryParse(Console.ReadLine(), out choice))
 
             break;
         case 3:
-            Console.WriteLine("Lorem ipsum");
+            DeleteAStudent();
+
+            Console.WriteLine("What Do You Want to do?");   //>>>
+            Console.WriteLine("1. Go To main Option");
+            Console.WriteLine("2. Exit");
+            int choice4 = int.Parse(Console.ReadLine());
+            if (choice4 == 1)
+            {
+                Console.Clear();
+                goto repeat;  //---------------------------------
+            }
+            else
+            {
+                Console.WriteLine("Exiting");
+            }                                               //>>
             break;
 
         case 4:
-            Console.WriteLine("Lorem ipsum");
-
+            Console.WriteLine("Exiting The App");
+            goto exiting;
             break;
         default:
             Console.WriteLine("Invalid option.");
@@ -67,6 +82,10 @@ if (int.TryParse(Console.ReadLine(), out choice))
     }
 }
 
+
+exiting:
+Console.Clear();
+Console.WriteLine("App Closed");
 //repeat:
 
 //goto repeat;
@@ -125,7 +144,17 @@ static void ViewAllStudent()
     }
 }
 
+static void DeleteAStudent()
+{
+    Console.WriteLine("Which student u want to delete(Id): ");
+    int id = int.Parse(Console.ReadLine());
 
+    AppDbContext appDbContext = new AppDbContext();
+    Student student = appDbContext.Students.Where(x => x.Id == id).FirstOrDefault();
+    appDbContext.Students.Remove(student);
+    appDbContext.SaveChanges();
+
+}
 
 
 
