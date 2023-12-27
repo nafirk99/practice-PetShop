@@ -3429,11 +3429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Codes\\EntityPractice2\\EntityPractice2\\EntityPractice2.csproj",
+      "projectUniqueName": "D:\\GitHub Repo\\practice\\EntityPractice2\\EntityPractice2\\EntityPractice2.csproj",
       "projectName": "EntityPractice2",
-      "projectPath": "D:\\Codes\\EntityPractice2\\EntityPractice2\\EntityPractice2.csproj",
+      "projectPath": "D:\\GitHub Repo\\practice\\EntityPractice2\\EntityPractice2\\EntityPractice2.csproj",
       "packagesPath": "C:\\Users\\plicl\\.nuget\\packages\\",
-      "outputPath": "D:\\Codes\\EntityPractice2\\EntityPractice2\\obj\\",
+      "outputPath": "D:\\GitHub Repo\\practice\\EntityPractice2\\EntityPractice2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\plicl\\AppData\\Roaming\\NuGet\\NuGet.Config",

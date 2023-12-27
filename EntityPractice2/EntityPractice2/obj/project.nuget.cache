@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ea63TnhAoxPeSRlDgi3jfdyA8bAJy4tZ4wX2rrnVfQ0Hwx7wV9dQXQS7DzTN2KjvheyYlUivPtfzRNGeoFTg6g==",
+  "dgSpecHash": "J0oV5HcPTKjcJ/llN/aALUkp5B98T1t9FdjNzZslxI3C+dlsfZ18ERC7Nos/GSd6msoW8P+i0hsoiJhFjb0BAA==",
   "success": true,
-  "projectFilePath": "D:\\Codes\\EntityPractice2\\EntityPractice2\\EntityPractice2.csproj",
+  "projectFilePath": "D:\\GitHub Repo\\practice\\EntityPractice2\\EntityPractice2\\EntityPractice2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\plicl\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\plicl\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
