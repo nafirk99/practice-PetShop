@@ -44,6 +44,35 @@ namespace EntityPractice2.Migrations
 
                     b.ToTable("Students");
                 });
+
+            modelBuilder.Entity("EntityPractice2.owner", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Owners");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = -1,
+                            Password = "123456",
+                            Username = "admin"
+                        });
+                });
 #pragma warning restore 612, 618
         }
     }

@@ -1,0 +1,9 @@
+tool install(error fix)
+dotnet tool install --global dotnet-ef --version 7.0
+
+Migration>>
+dotnet ef migrations add AddedStudentTable --project EntityPractice2 --context AppDbContext
+
+Database Update>>
+dotnet ef database update --project EntityPractice2 --context AppDbContext
+

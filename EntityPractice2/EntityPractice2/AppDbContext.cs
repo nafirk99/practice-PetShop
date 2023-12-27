@@ -25,9 +25,18 @@ namespace EntityPractice2
 
         protected  override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<owner>().HasData(GetOwners().ToArray()); 
+        }
 
+        private List<owner> GetOwners()
+        {
+            return new List<owner>
+            {
+                new owner() { Id = -1, Username = "admin", Password = "123456" }
+            };
         }
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<owner> Owners { get; set; }
     }
 }
