@@ -7,3 +7,7 @@ dotnet ef migrations add AddedStudentTable --project EntityPractice2 --context A
 Database Update>>
 dotnet ef database update --project EntityPractice2 --context AppDbContext
 
+
+
+
+
