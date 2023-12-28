@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kq+r4nHeVdxZOv38WM2owhOaGOssF/tUvz/Zi+3NMibFQwZapsSzm+vD4eYNLji34DoeJEU2OuRxhHnY2E7jcg==",
+  "dgSpecHash": "gy3+zN2URgZycerJ3A0hD6XN2mtLsmq4NAo6Ff4vLjNf94PmI3pOR+y+EbuwYNK7B4BJ/5h7aeDC7HOmb4TRWw==",
   "success": true,
-  "projectFilePath": "D:\\Codes\\LogInPractice1\\LogInPractice1\\LogInPractice1.csproj",
+  "projectFilePath": "D:\\GitHub Repo\\practice\\LogInPractice1\\LogInPractice1\\LogInPractice1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\plicl\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\plicl\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

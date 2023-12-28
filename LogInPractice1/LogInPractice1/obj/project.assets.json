@@ -3429,11 +3429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Codes\\LogInPractice1\\LogInPractice1\\LogInPractice1.csproj",
+      "projectUniqueName": "D:\\GitHub Repo\\practice\\LogInPractice1\\LogInPractice1\\LogInPractice1.csproj",
       "projectName": "LogInPractice1",
-      "projectPath": "D:\\Codes\\LogInPractice1\\LogInPractice1\\LogInPractice1.csproj",
+      "projectPath": "D:\\GitHub Repo\\practice\\LogInPractice1\\LogInPractice1\\LogInPractice1.csproj",
       "packagesPath": "C:\\Users\\plicl\\.nuget\\packages\\",
-      "outputPath": "D:\\Codes\\LogInPractice1\\LogInPractice1\\obj\\",
+      "outputPath": "D:\\GitHub Repo\\practice\\LogInPractice1\\LogInPractice1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\plicl\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -7,6 +7,56 @@ dotnet ef migrations add AddedStudentTable --project EntityPractice2 --context A
 Database Update>>
 dotnet ef database update --project EntityPractice2 --context AppDbContext
 
+RemoveMigration>>
+dotnet ef database update "NameofMigrationToGoTo" --project EntityPractice2 --context AppDbContext  |Removes From DB|
+
+dotnet ef migrations remove --project EntityPractice2 --context AppDbContext  |Removes From MIgration Folder In (VS)|
+
+
+public class Animal
+{
+ Id
+ Specie
+ Age
+ PurchasePrice
+ SellPrice?
+ SellerId
+ CageId
+}
+
+public class Fish
+{
+ Id
+ Specie
+ Age
+ PurchasePrice
+ SellPrice?
+ SellerId
+ AquariumId
+}
+
+public class Cage
+{
+ Id
+ FeedingStatus
+}
+
+public class Aquarium
+{
+ Id
+ FeedingStatus
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
