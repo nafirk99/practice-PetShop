@@ -16,22 +16,25 @@ repeat:   // -----------------------------------
 
 if (a == 1)
 {
-    Console.WriteLine("--------------------------------------------------------------------------");
-    Console.WriteLine("1.  Change Your Password.");
-    Console.WriteLine("2.  Add Animal Data.");
-    Console.WriteLine("3.  Add Fish Data.");
-    Console.WriteLine("4.  View All Animal Data In Inventory.");
-    Console.WriteLine("5.  Update Animal Data.");
-    Console.WriteLine("6.  View All Fish Data In Inventory.");
-    Console.WriteLine("7.  Update Fish Data.");
-    Console.WriteLine("8.  Feed Your Pet.");
-    Console.WriteLine("9.  Update/Add pet Purchase Information.");
-    Console.WriteLine("10. Sell Your Pet.");
-    Console.WriteLine("11. Sales Report Analysis.");
-    Console.WriteLine("12. Delete Animal Data.");
-    Console.WriteLine("13. Delete Fish Data.");
-    Console.WriteLine("14. Log Out.");
-    Console.WriteLine("--------------------------------------------------------------------------");
+    Console.WriteLine("╔══════════════════════════════════════════════════╗");
+    Console.WriteLine("║             WELCOME TO THE PET SHOP              ║");
+    Console.WriteLine("╟──────────────────────────────────────────────────╢");
+    Console.WriteLine("║ 1.  Change Your Password.                        ║");
+    Console.WriteLine("║ 2.  Add Animal Data.                             ║");
+    Console.WriteLine("║ 3.  Add Fish Data.                               ║");
+    Console.WriteLine("║ 4.  View All Animal Data In Inventory.           ║");
+    Console.WriteLine("║ 5.  Update Animal Data.                          ║");
+    Console.WriteLine("║ 6.  View All Fish Data In Inventory.             ║");
+    Console.WriteLine("║ 7.  Update Fish Data.                            ║");
+    Console.WriteLine("║ 8.  Feed Your Pet.                               ║");
+    Console.WriteLine("║ 9.  Update/Add Pet Purchase Information.         ║");
+    Console.WriteLine("║ 10. Sell Your Pet.                               ║");
+    Console.WriteLine("║ 11. Sales Report Analysis.                       ║");
+    Console.WriteLine("║ 12. Delete Animal Data.                          ║");
+    Console.WriteLine("║ 13. Delete Fish Data.                            ║");
+    Console.WriteLine("║ 14. Log Out.                                     ║");
+    Console.WriteLine("╚══════════════════════════════════════════════════╝");
+
 
     using AppDbContext dbContext = new AppDbContext();
     int choice;
