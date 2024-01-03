@@ -521,7 +521,9 @@ static void GetAllAnimaldata(AppDbContext dbContext)
     Console.WriteLine("--------------------------------------------------------------------------");
     foreach (Animal animal in animals)
     {
-        Console.WriteLine($"|Id: {animal.Id}|Species: {animal.Species}|Age: {animal.Age}|Purchase Price: {animal.PurchasePrice}|SellerId: {animal.SellerId}|");
+        //Console.WriteLine($"|Id: {animal.Id}\t|Species: {animal.Species}\t|Age:{animal.Age}\t|Purchase Price: {animal.PurchasePrice}\t|SellerId: {animal.SellerId}|");
+        Console.WriteLine($"|Id: {animal.Id,-10}|Species: {animal.Species,-10}|Age: {animal.Age,-10}|Purchase Price: {animal.PurchasePrice,-10}|SellerId: {animal.SellerId,-10}|");
+
     }
     Console.WriteLine("--------------------------------------------------------------------------");
 }
@@ -533,7 +535,7 @@ static void UpdateAnimal(AppDbContext dbContext)
     Console.WriteLine("--------------------------------------------------------------------------");
     foreach (Animal a in a1)
     {
-            Console.WriteLine($"|Id: {a.Id}|Species: {a.Species}|Age: {a.Age}|Purchase Price: {a.PurchasePrice}|SellerId: {a.SellerId}|");
+            Console.WriteLine($"|Id: {a.Id, -10}|Species: {a.Species,-10}|Age: {a.Age,-10}|Purchase Price: {a.PurchasePrice,-10}|SellerId: {a.SellerId,-10}|");
     }
     Console.WriteLine("--------------------------------------------------------------------------");
 
@@ -544,7 +546,7 @@ static void UpdateAnimal(AppDbContext dbContext)
     Animal animal = dbContext.Animals.Where(x => x.Id == id).FirstOrDefault();
 
     Console.WriteLine($"Details of Animal Id: {animal.Id}");
-    Console.WriteLine($"|Id: {animal.Id}|Species: {animal.Species}|Age: {animal.Age}|Purchase Price: {animal.PurchasePrice}|SellerId: {animal.SellerId}|");
+    Console.WriteLine($"|Id: {animal.Id,-10}|Species: {animal.Species,-10}|Age: {animal.Age,-10}|Purchase Price: {animal.PurchasePrice,-10}|SellerId: {animal.SellerId,-10}|");
 
     // Specie Update
     Console.Write("Enter Updated Specie: ");
@@ -575,7 +577,7 @@ static void GetAllFishData(AppDbContext dbContext)
     Console.WriteLine("--------------------------------------------------------------------------");
     foreach (Fish fish in fishes)
     {
-        Console.WriteLine($"|Id: {fish.Id}|Species: {fish.Species}|Age: {fish.Age}|Purchase Price: {fish.PurchasePrice}|SellerId: {fish.SellerId}|");
+        Console.WriteLine($"|Id: {fish.Id,-10}|Species: {fish.Species,-10}|Age: {fish.Age,-10}|Purchase Price: {fish.PurchasePrice,-10}|SellerId: {fish.SellerId,-10}|");
     }
     Console.WriteLine("--------------------------------------------------------------------------");
 }
@@ -587,7 +589,7 @@ static void UpdateFish(AppDbContext dbContext)
     Console.WriteLine("--------------------------------------------------------------------------");
     foreach (Fish f in f1)
     {
-        Console.WriteLine($"|Id: {f.Id}|Species: {f.Species}|Age: {f.Age}|Purchase Price: {f.PurchasePrice}|SellerId: {f.SellerId}|");
+        Console.WriteLine($"|Id: {f.Id,-10}|Species: {f.Species,-10}|Age: {f.Age,-10}|Purchase Price: {f.PurchasePrice,-10}|SellerId: {f.SellerId,-10}|");
     }
     Console.WriteLine("--------------------------------------------------------------------------");
 
@@ -598,7 +600,7 @@ static void UpdateFish(AppDbContext dbContext)
     Fish fish = dbContext.Fishes.Where(x => x.Id == id).FirstOrDefault();
 
     Console.WriteLine($"Details of Fish Id: {fish.Id}");
-    Console.WriteLine($"|Id: {fish.Id}|Species: {fish.Species}|Age: {fish.Age}|Purchase Price: {fish.PurchasePrice}|SellerId: {fish.SellerId}|");
+    Console.WriteLine($"|Id: {fish.Id,-10}|Species: {fish.Species,-10}|Age: {fish.Age,-10}|Purchase Price: {fish.PurchasePrice,-10}|SellerId: {fish.SellerId,-10}|");
 
     // Specie Update
     Console.Write("Enter Updated Specie: ");
@@ -628,7 +630,7 @@ static void GetAllCageData(AppDbContext dbContext)
     Console.WriteLine("--------------------------------------------------------------------------");
     foreach (Cage cage in cages)
     {
-        Console.WriteLine($"|Id: {cage.Id}|Feeding Status: {cage.FeedingStatus}|");
+        Console.WriteLine($"|Id: {cage.Id,-10}|Feeding Status: {cage.FeedingStatus,-10}|");
     }
     Console.WriteLine("--------------------------------------------------------------------------");
 }
@@ -653,7 +655,7 @@ static void GetAllAquariumData(AppDbContext dbContext)
     Console.WriteLine("--------------------------------------------------------------------------");
     foreach (Aquarium aqurium in aquariums)
     {
-        Console.WriteLine($"|Id: {aqurium.Id}|Feeding Status: {aqurium.FeedingStatus}|");
+        Console.WriteLine($"|Id: {aqurium.Id,-10}|Feeding Status: {aqurium.FeedingStatus,-10}|");
     }
     Console.WriteLine("--------------------------------------------------------------------------");
 }
@@ -681,7 +683,7 @@ static void UpdateAnimalPurchaseInfo(AppDbContext dbContext)
     Seller seller = dbContext.Sellers.Where(x => x.Id == animal.SellerId).FirstOrDefault();
 
     Console.WriteLine($"Details of Animal Id: {animal.Id}");
-    Console.WriteLine($"|SellerId: {animal.SellerId}|Seller Name: {seller.Name}|Seller Contact: {seller.Contact}|Purchase Price: {animal.PurchasePrice}|");
+    Console.WriteLine($"|SellerId: {animal.SellerId,-10}|Seller Name: {seller.Name,-10}|Seller Contact: {seller.Contact,-10}|Purchase Price: {animal.PurchasePrice,-10}|");
 
     // Seller name Update
     Console.Write("Enter Updated Seller Name: ");
@@ -715,7 +717,7 @@ static void UpdateFishPurchaseInfo(AppDbContext dbContext)
     Seller seller = dbContext.Sellers.Where(x => x.Id == fish.SellerId).FirstOrDefault();
 
     Console.WriteLine($"Details of Animal Id: {fish.Id}");
-    Console.WriteLine($"|SellerId: {fish.SellerId}|Seller Name: {seller.Name}|Seller Contact: {seller.Contact}|Purchase Price: {fish.PurchasePrice}|");
+    Console.WriteLine($"|SellerId: {fish.SellerId,-10}|Seller Name: {seller.Name,-10}|Seller Contact: {seller.Contact,-10}|Purchase Price: {fish.PurchasePrice,-10}|");
 
     // Seller name Update
     Console.Write("Enter Updated Seller Name: ");
@@ -748,7 +750,7 @@ static void SellAnimal(AppDbContext dbContext)
     SellRecord sellRecord = new SellRecord();
 
     Console.WriteLine("--------------------------------------------------------------------------");
-    Console.WriteLine($"Id: |{animal.Id}|Species: {animal.Species}|Age: {animal.Age}|Purchase Price: {animal.PurchasePrice}|Seller Id: {animal.SellerId}|Cage Id: {animal.CageId}|");
+    Console.WriteLine($"Id: |{animal.Id,-10}|Species: {animal.Species,-10}|Age: {animal.Age,-10}|Purchase Price: {animal.PurchasePrice,-10}|Seller Id: {animal.SellerId,-10}|Cage Id: {animal.CageId,-10}|");
     Console.WriteLine("--------------------------------------------------------------------------");
 
     // Sell Price
@@ -787,7 +789,7 @@ static void SellFish(AppDbContext dbContext)
     SellRecord sellRecord = new SellRecord();
 
     Console.WriteLine("--------------------------------------------------------------------------");
-    Console.WriteLine($"Id: |{fish.Id}|Species: {fish.Species}|Age: {fish.Age}|Purchase Price: {fish.PurchasePrice}|Seller Id: {fish.SellerId}|Aquarium Id: {fish.AquariumId}|");
+    Console.WriteLine($"Id: |{fish.Id,-10}|Species: {fish.Species,-10}|Age: {fish.Age,-10}|Purchase Price: {fish.PurchasePrice,-10}$|Seller Id: {fish.SellerId,-10}|Aquarium Id: {fish.AquariumId,-10}|");
     Console.WriteLine("--------------------------------------------------------------------------");
 
     // Sell Price
@@ -826,11 +828,11 @@ static void SalesRepport(AppDbContext dbContext)
     Console.WriteLine("--------------------------------------------------------------------------");
     foreach (Animal animal in animals)
     {
-        Console.WriteLine($"|Id: {animal.Id}|Species: {animal.Species}|Purcahse Price: {animal.PurchasePrice}|");
+        Console.WriteLine($"|Id: {animal.Id,-3}|Species: {animal.Species,-10}|Purcahse Price: {animal.PurchasePrice,-10}$|");
     }
     foreach(Fish fish in fishes)
     {
-        Console.WriteLine($"|Id: {fish.Id}|Species: {fish.Species}|Purcahse Price: {fish.PurchasePrice}|");
+        Console.WriteLine($"|Id: {fish.Id,-3}|Species: {fish.Species,-10}|Purcahse Price: {fish.PurchasePrice,-10}$|");
     }
     Console.WriteLine("--------------------------------------------------------------------------");
 
@@ -840,7 +842,7 @@ static void SalesRepport(AppDbContext dbContext)
     Console.WriteLine("--------------------------------------------------------------------------");
     foreach (SellRecord sellr in sellRecords)
     {
-        Console.WriteLine($"|Sell Id: {sellr.Id}|Species: {sellr.Species}|Purchase Price: {sellr.PurchasePrice}|Sell Price: {sellr.SellPrice}|Sell Date: {sellr.SellDate.ToShortDateString()}|");
+        Console.WriteLine($"|Sell Id: {sellr.Id,-3}|Species: {sellr.Species,-10}|Purchase Price: {sellr.PurchasePrice,-10}|Sell Price: {sellr.SellPrice,-10}|Sell Date: {sellr.SellDate.ToShortDateString(),-10}|");
         totalPurchase += sellr.PurchasePrice;
         totalSell += sellr.SellPrice;
     }
@@ -862,7 +864,7 @@ static void SalesRepport(AppDbContext dbContext)
         Console.WriteLine($"Total Purchase: {totalPurchase}");
         Console.WriteLine($"Total Sell:     {totalSell}");
     }
-
+    
     
 }
 
@@ -872,7 +874,7 @@ static void DeleteAnimal(AppDbContext dbContext)
     Console.WriteLine("--------------------------------------------------------------------------");
     foreach (Animal animal in animals)
     {
-        Console.WriteLine($"|Id: {animal.Id}|Species: {animal.Species}|Age: {animal.Age}|Purchase Price: {animal.PurchasePrice}|SellerId: {animal.SellerId}|");
+        Console.WriteLine($"|Id: {animal.Id,-10}|Species: {animal.Species,-10}|Age: {animal.Age,-10}|Purchase Price: {animal.PurchasePrice,-10}|SellerId: {animal.SellerId,-10}|");
     }
     Console.WriteLine("--------------------------------------------------------------------------");
 
@@ -890,7 +892,7 @@ static void DeleteFish(AppDbContext dbContext)
     Console.WriteLine("--------------------------------------------------------------------------");
     foreach(Fish fish1 in fish)
     {
-        Console.WriteLine($"|Id: {fish1.Id}|Species: {fish1.Species}|Age: {fish1.Age}|Purchase Price: {fish1.PurchasePrice}|SellerId: {fish1.SellerId}|");
+        Console.WriteLine($"|Id: {fish1.Id,-10}|Species: {fish1.Species,-10}|Age: {fish1.Age,-10}|Purchase Price: {fish1.PurchasePrice,-10}|SellerId: {fish1.SellerId,-10}|");
     }
     Console.WriteLine("--------------------------------------------------------------------------");
 

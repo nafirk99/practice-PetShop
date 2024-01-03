@@ -3429,11 +3429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\plicl\\Desktop\\BackUp\\1Petshop done\\PetShop\\PetShop\\PetShop.csproj",
+      "projectUniqueName": "D:\\GitHub Repo\\practice\\PetShop\\PetShop\\PetShop.csproj",
       "projectName": "PetShop",
-      "projectPath": "C:\\Users\\plicl\\Desktop\\BackUp\\1Petshop done\\PetShop\\PetShop\\PetShop.csproj",
+      "projectPath": "D:\\GitHub Repo\\practice\\PetShop\\PetShop\\PetShop.csproj",
       "packagesPath": "C:\\Users\\plicl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\plicl\\Desktop\\BackUp\\1Petshop done\\PetShop\\PetShop\\obj\\",
+      "outputPath": "D:\\GitHub Repo\\practice\\PetShop\\PetShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\plicl\\AppData\\Roaming\\NuGet\\NuGet.Config",

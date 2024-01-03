@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WAtfVWTJjoLH0Zwge30swyqCKJ8tRgn6RXaL/qKCXYHpCr13wUHjhw8nrYmIsQ0GMYd4lRGEO3KMt/Pifegp6g==",
+  "dgSpecHash": "kAahFJOJf6/p/zMthEIu4MDda82fCJTyUfLiae0LkrCXK3bZvORu12SrDk3lg1MsP7TkS+viU7AQANpDhKvsAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\plicl\\Desktop\\BackUp\\1Petshop done\\PetShop\\PetShop\\PetShop.csproj",
+  "projectFilePath": "D:\\GitHub Repo\\practice\\PetShop\\PetShop\\PetShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\plicl\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\plicl\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
