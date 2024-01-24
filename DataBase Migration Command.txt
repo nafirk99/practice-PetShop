@@ -9,7 +9,6 @@ dotnet ef database update --project EntityPractice2 --context AppDbContext
 
 RemoveMigration>>
 dotnet ef database update "NameofMigrationToGoTo" --project EntityPractice2 --context AppDbContext  |Removes From DB|
-
 dotnet ef migrations remove --project EntityPractice2 --context AppDbContext  |Removes From MIgration Folder In (VS)|
 
 
