@@ -22,7 +22,7 @@ namespace PetShop
 
             base.OnConfiguring(optionsBuilder);
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder) //Fluent API Here
         {
             modelBuilder.Entity<owner>().HasData(GetOwners().ToArray());
 
